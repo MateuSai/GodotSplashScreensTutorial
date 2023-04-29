@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://doliilysdvdif"]
+
+[ext_resource type="PackedScene" uid="uid://2co1ko3rv6yl" path="res://splash_screen/godot_splash_screen.tscn" id="1_amu0p"]
+[ext_resource type="Script" path="res://splash_screen/splash_screen_manager.gd" id="1_fblie"]
+[ext_resource type="PackedScene" uid="uid://kqvcy0xayjx8" path="res://splash_screen/controller_splash_screen.tscn" id="2_ac0ax"]
+[ext_resource type="PackedScene" uid="uid://c6mm6uufbtgt" path="res://menu.tscn" id="2_q0yw7"]
+
+[node name="SplashScreenManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fblie")
+_move_to = ExtResource("2_q0yw7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SplashScreenContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GodotSplashScreen" parent="SplashScreenContainer" instance=ExtResource("1_amu0p")]
+layout_mode = 2
+
+[node name="ControllerSplashScreen" parent="SplashScreenContainer" instance=ExtResource("2_ac0ax")]
+layout_mode = 2

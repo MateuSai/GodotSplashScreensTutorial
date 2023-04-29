@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://kqvcy0xayjx8"]
+
+[ext_resource type="Script" path="res://splash_screen/splash_screen.gd" id="1_kjk65"]
+[ext_resource type="Texture2D" uid="uid://bh0cnlcukots4" path="res://controller-svgrepo-com.svg" id="2_mb80c"]
+
+[node name="ControllerSplashScreen" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_kjk65")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+texture = ExtResource("2_mb80c")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Real Gigachads play with a controller"
+horizontal_alignment = 1
+autowrap_mode = 2

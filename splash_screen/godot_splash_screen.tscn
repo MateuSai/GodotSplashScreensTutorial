@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://2co1ko3rv6yl"]
+
+[ext_resource type="Script" path="res://splash_screen/splash_screen.gd" id="1_dgi5c"]
+[ext_resource type="Texture2D" uid="uid://c2caea7otr0fy" path="res://logo.png" id="2_eg5iq"]
+
+[node name="GodotSplashScreen" type="VBoxContainer"]
+offset_right = 461.0
+offset_bottom = 182.0
+script = ExtResource("1_dgi5c")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+texture = ExtResource("2_eg5iq")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "GODOT"
+horizontal_alignment = 1
